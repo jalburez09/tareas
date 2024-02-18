@@ -1,23 +1,21 @@
 #include <iostream>
-#include <iostream>
 using namespace std;
 
-unsigned int factorial(unsigned int n) {
-    if (n == 0)
-        return 1;
-    return n * factorial(n - 1);
-}
-
 int main() {
-    int numero;
+    int num = 0;
+    int x1 = 0;
+    int x2 = 1;
+    int x3 = 1;
 
-    cout << "Ingresa un número positivo: ";
-    cin >> numero;
+    cout << "Cantidad de elementos: ";
+    cin >> num;
 
-    if (numero < 0)
-        cout << "Error. El factorial de un número negativo no existe.";
-    else
-        cout << "El factorial de " << numero << " es: " << factorial(numero);
+    for (int i = 1; i < num; i++) {
+        x3 = x1 + x2;
+        cout << x3 << " ";
+        x1 = x2;
+        x2 = x3;
+    }
 
     return 0;
 }
